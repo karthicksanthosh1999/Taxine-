@@ -54,7 +54,7 @@ const cardItem = {
       ease: "easeOut",
     },
   },
-};
+} as const;
 
     return (
         <>
