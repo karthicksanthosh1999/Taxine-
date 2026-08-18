@@ -202,7 +202,7 @@ const Header = () => {
                       }}
                     >
                       <Link
-                        href="#"
+                        href={item.link}
                         onClick={() => setIsOpen(false)}
                         className="
                           block
@@ -226,7 +226,7 @@ const Header = () => {
                   {/* Mobile CTA */}
                   <li className="pt-4">
                     <Link
-                      href="/contact"
+                      href="contact"
                       onClick={() => setIsOpen(false)}
                       className="
                         flex
