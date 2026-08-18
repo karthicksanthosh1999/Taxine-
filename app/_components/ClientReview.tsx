@@ -67,7 +67,7 @@ const cardItem = {
                 `}
             </style>
 
-            <section className="bg-zinc-100 py-16 px-4">
+            <section id='review' className="bg-zinc-100 py-16 px-4">
                 <div className="max-w-6xl mx-auto">
                        <motion.div
           initial={{ opacity: 0, y: 25 }}

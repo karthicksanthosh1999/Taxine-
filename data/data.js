@@ -1,22 +1,26 @@
 export const pages = [
         {
             title : 'About',
-            link: '/about'
+            link: '#about'
         },
         {
             title : 'Service',
-            link: '/service'
+            link: '#service'
         },
         {
             title : 'Why Us',
-            link: '/whyus'
+            link: '#whyus'
+        },
+        {
+            title : 'Process',
+            link: '#process'
         },
         {
             title : 'Review',
-            link: '/review'
+            link: '#review'
         },
         {
             title : 'Contact',
-            link: '/contact'
+            link: '#contact'
         },
     ]

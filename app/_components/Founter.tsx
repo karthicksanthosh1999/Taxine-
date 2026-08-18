@@ -21,7 +21,7 @@ const expertise = [
 
 export default function FounderSection() {
   return (
-    <section className="w-full bg-[#f8f8f8] py-16 sm:py-20 lg:py-24">
+    <section id="about" className="w-full bg-[#f8f8f8] py-16 sm:py-20 lg:py-24">
       <div
         className="
           mx-auto
@@ -134,7 +134,7 @@ export default function FounderSection() {
             "
           >
             <User />
-            Expert Leadership
+            Meet Our Founder
           </motion.p>
 
           {/* Heading */}
@@ -150,7 +150,7 @@ export default function FounderSection() {
               lg:text-[38px]
             "
           >
-            Meet Our Founder
+            Praveen <span className="text-[#2E7D32]">Dorairaj</span>
           </h2>
 
           {/* Description */}
@@ -267,7 +267,6 @@ export default function FounderSection() {
                 transition-all
                 duration-300
                 hover:bg-[#D4AF37]
-                hover:text-black
                 hover:shadow-lg
                 sm:text-sm
               "

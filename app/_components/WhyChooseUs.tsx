@@ -59,7 +59,7 @@ const itemVariants = {
 
 export default function WhyChooseUs() {
   return (
-    <section className="w-full bg-white py-20 sm:py-24 lg:py-28">
+    <section id="whyus" className="w-full bg-white py-20 sm:py-24 lg:py-28">
       <div className="mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-10">
         {/* Section Header */}
         <motion.div

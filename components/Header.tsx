@@ -49,7 +49,7 @@ const Header = () => {
               {pages.map((item, index) => (
                 <li key={`${item.title}-${index}`}>
                   <Link
-                    href="#"
+                    href={item.link}
                     className="
                       relative
                       py-2
@@ -242,7 +242,7 @@ const Header = () => {
                         transition-colors
                         duration-300
                         hover:bg-[#D4AF37]
-                        hover:text-black
+                        hover:text-white
                       "
                     >
                       Book Free Consultation

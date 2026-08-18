@@ -6,8 +6,10 @@ import {
   MapPin,
   Phone,
   LockKeyhole,
+  Timer,
 } from "lucide-react";
 import { useState } from "react";
+import { FaEnvelope, FaFacebookF, FaInstagram, FaWhatsapp } from "react-icons/fa";
 
 const services = [
   "Income Tax Return Filing",
@@ -29,6 +31,11 @@ const contactItems = [
     value: "+91 79759 04980",
   },
   {
+    icon: FaWhatsapp,
+    label: "WHATSAPP",
+    value: "+91 79759 04980",
+  },
+  {
     icon: Mail,
     label: "EMAIL US",
     value: "taxinetaxconsultants@gmail.com",
@@ -39,6 +46,11 @@ const contactItems = [
     value:
       "No.524, 50 Feet Main Road, Near 15B Bus Stop, Ground Floor, Next To UK Collections, Bangalore – 560111",
   },
+  {
+    icon: Timer,
+    label:'Office Hours',
+    value: "Monday - Saturday: 9:00 AM to 7:00 PM"
+  }
 ];
 
 export default function ContactSection() {
@@ -55,7 +67,7 @@ export default function ContactSection() {
   };
 
   return (
-    <section className="w-full bg-[#172c40] py-16 sm:py-20 lg:py-24">
+    <section className="w-full bg-[#172c40] py-16 sm:py-20 lg:py-24" id="contact">
       <div
         className="
           mx-auto
@@ -219,6 +231,129 @@ export default function ContactSection() {
               );
             })}
           </div>
+
+          {/* Social Icons */}
+          <motion.div
+            initial={{
+              opacity: 0,
+              y: 20,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+            }}
+            viewport={{
+              once: true,
+            }}
+            transition={{
+              duration: 0.5,
+              delay: 0.7,
+            }}
+            className="mt-8 flex items-center gap-3"
+          >
+            {[
+              {
+                icon: FaFacebookF,
+                label: "Facebook",
+              },
+              {
+                icon: FaWhatsapp,
+                label: "WhatsApp",
+              },
+              {
+                icon: FaInstagram,
+                label: "Instagram",
+              },
+              {
+                icon: FaEnvelope,
+                label: "Email",
+              },
+            ].map((item, index) => {
+              const Icon = item.icon;
+
+              return (
+                <motion.button
+                  key={item.label}
+                  initial={{
+                    opacity: 0,
+                    scale: 0.7,
+                    y: 15,
+                  }}
+                  whileInView={{
+                    opacity: 1,
+                    scale: 1,
+                    y: 0,
+                  }}
+                  viewport={{
+                    once: true,
+                  }}
+                  transition={{
+                    duration: 0.4,
+                    delay: 0.8 + index * 0.1,
+                    ease: "easeOut",
+                  }}
+                  whileHover={{
+                    scale: 1.12,
+                    y: -5,
+                  }}
+                  whileTap={{
+                    scale: 0.92,
+                  }}
+                  className="
+                    group
+                    relative
+                    flex
+                    size-10
+                    items-center
+                    justify-center
+                    overflow-hidden
+                    border
+                    border-white/10
+                    bg-white/10
+                    text-[#D4AF37]
+                    transition-colors
+                    duration-300
+                    hover:border-[#D4AF37]
+                    hover:bg-[#D4AF37]
+                    hover:text-[#172c40]
+                  "
+                  aria-label={item.label}
+                >
+                  {/* Glow */}
+                  <motion.span
+                    className="
+                      absolute
+                      inset-0
+                      rounded-full
+                      bg-[#D4AF37]
+                      opacity-0
+                      blur-md
+                    "
+                    whileHover={{
+                      opacity: 0.25,
+                      scale: 1.4,
+                    }}
+                    transition={{
+                      duration: 0.3,
+                    }}
+                  />
+
+                  {/* Icon */}
+                  <motion.span
+                    className="relative z-10 flex items-center justify-center cursor-pointer"
+                    whileHover={{
+                      rotate: [0, -10, 10, 0],
+                    }}
+                    transition={{
+                      duration: 0.4,
+                    }}
+                  >
+                    <Icon size={15} />
+                  </motion.span>
+                </motion.button>
+              );
+            })}
+          </motion.div>
         </motion.div>
 
         {/* ===================================== */}

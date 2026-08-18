@@ -32,7 +32,7 @@ const steps = [
 
 export default function ProcessSection() {
   return (
-    <section className="w-full bg-[#f8f9fa] py-20 sm:py-24 lg:py-28">
+    <section id="process" className="w-full bg-[#f8f9fa] py-20 sm:py-24 lg:py-28">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         {/* Header */}
         <motion.div

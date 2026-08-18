@@ -173,7 +173,7 @@ export default function NumberCount() {
                   flex
                   items-center
                   justify-center
-                  text-[#C9A52F]
+                  text-gray-400
                 "
               >
                 <Icon
@@ -196,7 +196,7 @@ export default function NumberCount() {
                   text-4xl
                   font-medium
                   leading-none
-                  text-[#C9A52F]
+                  text-white
                   sm:text-5xl
                 "
               >

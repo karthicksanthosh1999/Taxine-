@@ -42,6 +42,7 @@ const trustedItems = [
 export default function Hero() {
   return (
     <section
+      id="#home"
       className="
         relative
         flex
@@ -195,7 +196,7 @@ export default function Hero() {
                 px-6
                 text-sm
                 font-medium
-                text-black
+                text-white
                 transition-all
                 duration-300
                 hover:bg-[#c9a52f]
@@ -230,7 +231,7 @@ export default function Hero() {
                 transition-all
                 duration-300
                 hover:bg-[#D4AF37]
-                hover:text-black
+                hover:text-white
                 sm:w-auto
               "
             >
