@@ -67,7 +67,7 @@ export default function ContactSection() {
   };
 
   return (
-    <section className="w-full bg-[#172c40] py-16 sm:py-20 lg:py-24" id="contact">
+    <section className="w-full bg-[#2E7D32] py-16 sm:py-20 lg:py-24" id="contact">
       <div
         className="
           mx-auto
@@ -134,7 +134,7 @@ export default function ContactSection() {
               lg:text-[40px]
             "
           >
-            Ready to Sort Your <span className="text-[#2E7D32]">Taxes & Compliance?</span>
+            Ready to Sort Your Taxes & Compliance?
           </h2>
 
           {/* Description */}
@@ -186,16 +186,14 @@ export default function ContactSection() {
                       shrink-0
                       items-center
                       justify-center
-                      bg-white/10
-                      text-[#D4AF37]
+                      bg-[#192D41]
+                      text-white
                       transition-all
                       duration-300
-                      group-hover:bg-[#D4AF37]
-                      group-hover:text-[#172c40]
                     "
                   >
                     <Icon
-                      size={17}
+                      size={20}
                       strokeWidth={1.7}
                     />
                   </div>
@@ -309,13 +307,10 @@ export default function ContactSection() {
                     overflow-hidden
                     border
                     border-white/10
-                    bg-white/10
-                    text-[#D4AF37]
+                    bg-[#192D41]
+                    text-white
                     transition-colors
                     duration-300
-                    hover:border-[#D4AF37]
-                    hover:bg-[#D4AF37]
-                    hover:text-[#172c40]
                   "
                   aria-label={item.label}
                 >
@@ -348,7 +343,7 @@ export default function ContactSection() {
                       duration: 0.4,
                     }}
                   >
-                    <Icon size={15} />
+                    <Icon size={20} />
                   </motion.span>
                 </motion.button>
               );
@@ -363,7 +358,7 @@ export default function ContactSection() {
         <motion.div
           initial={{
             opacity: 0,
-            x: 40,
+            x: 20,
             y: 20,
           }}
           whileInView={{
@@ -607,12 +602,12 @@ export default function ContactSection() {
                 w-full
                 items-center
                 justify-center
-                bg-[#172c40]
-                text-xs
+                text-sm
                 font-semibold
                 text-white
                 transition-colors
                 duration-300
+                bg-[#2E7D32]
                 hover:bg-[#D4AF37]
                 hover:text-white
                 disabled:cursor-not-allowed

@@ -182,7 +182,7 @@ export default function Hero() {
           >
             {/* Primary Button */}
             <Link
-              href="/contact"
+              href="contact"
               className="
                 flex
                 h-12
@@ -192,7 +192,7 @@ export default function Hero() {
                 justify-center
                 border
                 border-[#D4AF37]
-                bg-[#D4AF37]
+                bg-[#2E7D32]
                 px-6
                 text-sm
                 font-medium

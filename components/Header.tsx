@@ -108,12 +108,11 @@ const Header = () => {
             </a>
 
             <Link
-              href="/contact"
+              href="#contact"
               className="
                 inline-flex
                 items-center
                 justify-center
-                bg-[#1A2B3C]
                 px-5
                 py-3
                 text-sm
@@ -121,8 +120,8 @@ const Header = () => {
                 text-white
                 transition-all
                 duration-300
+                bg-[#2E7D32]
                 hover:bg-[#D4AF37]
-                hover:text-black
               "
             >
               Free Consultation
@@ -226,7 +225,7 @@ const Header = () => {
                   {/* Mobile CTA */}
                   <li className="pt-4">
                     <Link
-                      href="contact"
+                      href="#contact"
                       onClick={() => setIsOpen(false)}
                       className="
                         flex

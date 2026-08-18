@@ -117,6 +117,7 @@ export default function Footer() {
             aria-label="Footer navigation"
           >
             <ul className="space-y-4">
+              <h1 className="text-xl font-semibold text-white tracking-wider">Quick Links</h1>
               {services.map((service, index) => (
                 <motion.li
                   key={service.label}
@@ -157,6 +158,7 @@ export default function Footer() {
           {/* CONTACT */}
           {/* ================================= */}
 
+
           <motion.div
             initial={{
               opacity: 0,
@@ -174,7 +176,8 @@ export default function Footer() {
               delay: 0.2,
             }}
             className="text-sm text-[#91A5BB]"
-          >
+            >
+            <h1 className="text-xl font-semibold text-white tracking-wider">Address</h1>
             {/* Address */}
             <p className="max-w-md leading-6">
               No.524, 50 Feet Main Road, Near 15F Bus Stop,

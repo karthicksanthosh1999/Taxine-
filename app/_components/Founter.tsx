@@ -39,7 +39,7 @@ export default function FounderSection() {
       >
         {/* Founder Image */}
         <motion.div
-          initial={{ opacity: 0, x: -50 }}
+          initial={{ opacity: 0, x: 20 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, amount: 0.25 }}
           transition={{
@@ -78,7 +78,7 @@ export default function FounderSection() {
               inset-x-0
               bottom-0
               h-36
-              bg-gradient-to-t
+              bg-linear-to-t
               from-black/75
               via-black/30
               to-transparent
@@ -107,7 +107,7 @@ export default function FounderSection() {
 
         {/* Content */}
         <motion.div
-          initial={{ opacity: 0, x: 50 }}
+          initial={{ opacity: 0, x: 20 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, amount: 0.25 }}
           transition={{
@@ -252,13 +252,12 @@ export default function FounderSection() {
             className="mt-7"
           >
             <Link
-              href="/contact"
+              href="#contact"
               className="
                 inline-flex
                 h-11
                 items-center
                 justify-center
-                bg-[#092b4c]
                 px-7
                 text-xs
                 font-semibold
@@ -266,6 +265,7 @@ export default function FounderSection() {
                 shadow-md
                 transition-all
                 duration-300
+                bg-[#2E7D32]
                 hover:bg-[#D4AF37]
                 hover:shadow-lg
                 sm:text-sm

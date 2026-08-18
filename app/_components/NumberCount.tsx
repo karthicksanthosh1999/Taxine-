@@ -95,7 +95,7 @@ export default function NumberCount() {
   return (
     <section
       ref={sectionRef}
-      className="w-full border-b border-white/10 bg-[#092B4C]"
+      className="w-full border-b border-white/10 bg-[#2E7D32]"
     >
       <div
         className="

@@ -17,7 +17,6 @@ export default function Home() {
   return (
     <>
       <AuthProvider>
-        <Header/>
         <HomeHero/>
         <FounderSection/>
         <Services />
@@ -28,7 +27,6 @@ export default function Home() {
         <ContactSection />
         <GoogleMap />
         <ScrollBar/>
-        <Footer/>
       </AuthProvider>
     </>
   );

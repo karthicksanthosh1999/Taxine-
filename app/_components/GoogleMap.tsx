@@ -251,7 +251,7 @@ export default function GoogleMap() {
                   key={item.title}
                   initial={{
                     opacity: 0,
-                    x: 40,
+                    x: 10,
                   }}
                   whileInView={{
                     opacity: 1,
@@ -362,7 +362,6 @@ export default function GoogleMap() {
                 w-fit
                 items-center
                 justify-center
-                bg-[#172c40]
                 px-6
                 py-3
                 text-sm
@@ -370,8 +369,8 @@ export default function GoogleMap() {
                 text-white
                 transition-colors
                 duration-300
+                bg-[#2E7D32]
                 hover:bg-[#D4AF37]
-                hover:text-white
               "
             >
               Get Directions
