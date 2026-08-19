@@ -65,106 +65,11 @@ const contactDetails = [
 
 export default function GoogleMap() {
   return (
-    <section className="w-full bg-gray-50 py-16 sm:py-20 lg:py-24">
+    <section className="w-full bg-gray-50 py-10">
       <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
-
-        {/* ================================= */}
-        {/* HEADER */}
-        {/* ================================= */}
-
-        <motion.div
-          initial={{
-            opacity: 0,
-            y: 30,
-          }}
-          whileInView={{
-            opacity: 1,
-            y: 0,
-          }}
-          viewport={{
-            once: true,
-            amount: 0.3,
-          }}
-          transition={{
-            duration: 0.7,
-            ease: "easeOut",
-          }}
-          className="mx-auto max-w-2xl text-center"
-        >
-          {/* Small heading */}
-          <p
-            className="
-              text-[10px]
-              font-medium
-              uppercase
-              tracking-[0.2em]
-              text-[#D4AF37]
-              sm:text-xs
-              flex text-center gap-3
-              justify-center
-            "
-          >
-            <Search size={15} />
-            Find Us
-          </p>
-
-          {/* Main heading */}
-          <h2
-            className="
-              mt-3
-              font-serif
-              text-3xl
-              font-bold
-              text-[#172c40]
-              sm:text-4xl
-            "
-          >
-            Visit Our Location
-          </h2>
-
-          {/* Description */}
-          <p
-            className="
-              mx-auto
-              mt-4
-              max-w-xl
-              text-sm
-              leading-6
-              text-gray-500
-              sm:text-base
-              sm:leading-7
-            "
-          >
-            Visit our office in Bangalore for professional tax, accounting,
-            GST and compliance services.
-          </p>
-
-          {/* Gold line */}
-          <motion.div
-            initial={{ width: 0 }}
-            whileInView={{ width: 48 }}
-            viewport={{ once: true }}
-            transition={{
-              duration: 0.6,
-              delay: 0.3,
-            }}
-            className="mx-auto mt-5 h-0.5 bg-[#D4AF37]"
-          />
-        </motion.div>
-
-        {/* ================================= */}
-        {/* CONTENT */}
-        {/* ================================= */}
-
         <div
           className="
-            mt-12
-            grid
-            grid-cols-1
-            gap-8
-            lg:mt-16
-            lg:grid-cols-2
-            lg:gap-12
+            mt-12 h-full
           "
         >
 
@@ -203,10 +108,10 @@ export default function GoogleMap() {
               transition-shadow
               duration-300
               hover:shadow-lg
+              h-[500px]
             "
           >
-            <div className="relative h-[350px] sm:h-[420px] lg:h-full lg:min-h-[480px]">
-
+            <div className="relative h-full">
               {/* Map overlay */}
               <div
                 className="
@@ -236,101 +141,9 @@ export default function GoogleMap() {
               />
             </div>
           </motion.div>
-
-          {/* ================================= */}
-          {/* INFORMATION */}
-          {/* ================================= */}
-
-          <div className="flex flex-col justify-center">
-
-            {contactDetails.map((item, index) => {
-              const Icon = item.icon;
-
-              return (
-                <motion.div
-                  key={item.title}
-                  initial={{
-                    opacity: 0,
-                    x: 10,
-                  }}
-                  whileInView={{
-                    opacity: 1,
-                    x: 0,
-                  }}
-                  viewport={{
-                    once: true,
-                    amount: 0.2,
-                  }}
-                  transition={{
-                    duration: 0.6,
-                    delay: index * 0.15,
-                    ease: "easeOut",
-                  }}
-                  whileHover={{
-                    x: 5,
-                  }}
-                  className="
-                    group
-                    border-b
-                    border-gray-200
-                    px-1
-                    py-6
-                    first:pt-0
-                    last:border-b-0
-                  "
-                >
-                  <div className="flex gap-4">
-
-                    {/* Icon */}
-                    <motion.div
-                      whileHover={{
-                        scale: 1.08,
-                        rotate: 3,
-                      }}
-                      className="
-                        flex
-                        size-11
-                        shrink-0
-                        items-center
-                        justify-center
-                        rounded-sm
-                        border
-                        bg-[#D4AF37]
-                        text-white
-                        transition-colors
-                        duration-300
-                        group-hover:bg-[#D4AF37]
-                        group-hover:border-[#172c40]
-                      "
-                    >
-                      <Icon
-                        size={19}
-                        strokeWidth={1.7}
-                      />
-                    </motion.div>
-
-                    {/* Text */}
-                    <div>
-                      <h3
-                        className="
-                          font-serif
-                          text-lg
-                          font-semibold
-                          text-[#172c40]
-                        "
-                      >
-                        {item.title}
-                      </h3>
-
-                      {item.content}
-                    </div>
-                  </div>
-                </motion.div>
-              );
-            })}
-
-            {/* Direction Button */}
-
+        </div>
+      </div>
+      <div className="flex items-center justify-center">
             <motion.a
               href="https://www.google.com/maps"
               target="_blank"
@@ -375,8 +188,6 @@ export default function GoogleMap() {
             >
               Get Directions
             </motion.a>
-          </div>
-        </div>
       </div>
     </section>
   );

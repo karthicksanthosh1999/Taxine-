@@ -6,10 +6,11 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X, Phone } from "lucide-react";
 import { pages } from "@/data/data";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
-
+  const pathname = usePathname();
   return (
     <header className="sticky top-0 z-50 w-full border-b border-gray-200 bg-[#F8F9FA]/95 backdrop-blur-md">
       <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
@@ -44,44 +45,59 @@ const Header = () => {
           {/* DESKTOP NAVIGATION */}
           {/* ========================= */}
 
-          <nav className="hidden lg:block">
-            <ul className="flex items-center gap-7 xl:gap-10">
-              {pages.map((item, index) => (
-                <li key={`${item.title}-${index}`}>
-                  <Link
-                    href={item.link}
-                    className="
-                      relative
-                      py-2
-                      text-sm
-                      font-medium
-                      text-[#1A2B3C]
-                      transition-colors
-                      duration-300
-                      hover:text-[#D4AF37]
-                    "
-                  >
-                    {item.title}
+<nav className="hidden lg:block">
+  <ul className="flex items-center justify-center gap-7 xl:gap-10">
+    {pages.map((item, index) => {
+      const isActive =
+        item.link === "/"
+          ? pathname === "/"
+          : pathname.startsWith(item.link);
 
-                    {/* Hover underline */}
-                    <span
-                      className="
-                        absolute
-                        bottom-0
-                        left-0
-                        h-px
-                        w-0
-                        bg-[#D4AF37]
-                        transition-all
-                        duration-300
-                        group-hover:w-full
-                      "
-                    />
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </nav>
+      return (
+        <li key={`${item.title}-${index}`}>
+          <Link
+            href={item.link}
+            className={`
+              relative
+              inline-block
+              py-2
+              text-sm
+              font-medium
+              transition-colors
+              duration-300
+              ${
+                isActive
+                  ? "text-[#D4AF37]"
+                  : "text-[#1A2B3C] hover:text-[#D4AF37]"
+              }
+            `}
+          >
+            {item.title}
+
+            {isActive && (
+              <motion.span
+                layoutId="activeNavUnderline"
+                className="
+                  absolute
+                  bottom-0
+                  left-0
+                  h-[2px]
+                  w-full
+                  bg-[#D4AF37]
+                "
+                transition={{
+                  type: "spring",
+                  stiffness: 400,
+                  damping: 30,
+                }}
+              />
+            )}
+          </Link>
+        </li>
+      );
+    })}
+  </ul>
+</nav>
 
           {/* ========================= */}
           {/* DESKTOP CTA */}
@@ -225,7 +241,7 @@ const Header = () => {
                   {/* Mobile CTA */}
                   <li className="pt-4">
                     <Link
-                      href="#contact"
+                      href="/contact"
                       onClick={() => setIsOpen(false)}
                       className="
                         flex

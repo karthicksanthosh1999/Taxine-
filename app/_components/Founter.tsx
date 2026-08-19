@@ -56,7 +56,7 @@ export default function FounderSection() {
           "
         >
           <img
-            src="/founder.jpg"
+            src="/founder.avif"
             alt="Founder and Proprietor"
             className="
               h-105
@@ -252,7 +252,7 @@ export default function FounderSection() {
             className="mt-7"
           >
             <Link
-              href="#contact"
+              href="/contact"
               className="
                 inline-flex
                 h-11

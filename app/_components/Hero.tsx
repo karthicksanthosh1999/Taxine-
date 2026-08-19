@@ -182,7 +182,7 @@ export default function Hero() {
           >
             {/* Primary Button */}
             <Link
-              href="contact"
+              href="/contact"
               className="
                 flex
                 h-12

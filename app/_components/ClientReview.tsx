@@ -152,7 +152,7 @@ const cardItem = {
             variants={{
               hidden: {
                 opacity: 0,
-                x: -60,
+                x: -20,
               },
               visible: {
                 opacity: 1,

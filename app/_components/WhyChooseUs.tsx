@@ -269,7 +269,7 @@ export default function WhyChooseUs() {
               "
             >
               <img
-                src="/whychoose.avif"
+                src="/whychoose.jpg"
                 alt="Professional accounting and tax services"
                 className="
                   h-105

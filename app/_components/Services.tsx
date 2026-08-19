@@ -379,45 +379,6 @@ export default function Services() {
   return (
     <section id="service" className="bg-[#f9fbf8] px-5 py-16">
       <div className="mx-auto max-w-6xl">
-
-        {/* Header */}
-
-        <motion.div
-          initial={{
-            opacity: 0,
-            y: -25,
-          }}
-          whileInView={{
-            opacity: 1,
-            y: 0,
-          }}
-          viewport={{
-            once: true,
-          }}
-          transition={{
-            duration: 0.7,
-            ease: "easeOut",
-          }}
-          className="mx-auto mb-10 max-w-2xl text-center"
-        >
-          <h2 className="font-serif text-3xl font-bold text-[#173b2a] sm:text-4xl
-              md:text-[40px]">
-            Comprehensive  <span className="text-[#2E7D32]">Tax & Financial </span> Services
-          </h2>
-
-          <p className="mx-auto mt-3      
-                max-w-2xl
-              text-sm
-              leading-6
-              text-[#253448]
-              sm:text-base
-              sm:leading-7">
-            From individual income tax to complex corporate compliance — we
-            cover everything your business needs to stay legally compliant and
-            financially healthy.
-          </p>
-        </motion.div>
-
         {/* Cards */}
 
         <motion.div
