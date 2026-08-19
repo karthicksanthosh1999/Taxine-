@@ -1,5 +1,6 @@
 import FounderSection from '../_components/Founter';
 import MiniServices from '../_components/MinServices';
+import NewsLetter from '../_components/NewsLetter';
 import ProcessSection from '../_components/ProcessSection';
 import SeconHeader from '../_components/SeconHeader';
 import WhyChooseUs from '../_components/WhyChooseUs';
@@ -15,6 +16,7 @@ const page = () => {
     <FounderSection/>
     <ProcessSection/>
     <MiniServices/>
+    <NewsLetter />
     </>
   )
 }

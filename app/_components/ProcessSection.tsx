@@ -166,8 +166,8 @@ export default function ProcessSection() {
                     border-white
                     bg-[#e9eaeb]
                     text-[#092b4c]
-                    group-hover:bg-[#172c40] 
-                    group-hover:text-[#D4AF37]
+                    group-hover:text-white
+                    group-hover:bg-primary 
                   `}
                 >
                   <span

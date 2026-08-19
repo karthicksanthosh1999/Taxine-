@@ -11,6 +11,8 @@ import {
   MapPin,
   ArrowDown,
 } from "lucide-react";
+import PaymentModal from "./paymentModel";
+import { Dispatch, SetStateAction, useState } from "react";
 
 const trustedItems = [
   {
@@ -39,7 +41,11 @@ const trustedItems = [
   },
 ];
 
-export default function Hero() {
+interface HomeHeroProps {
+  setOpen: Dispatch<SetStateAction<boolean>>;
+}
+
+export default function Hero ({ setOpen }: HomeHeroProps) {
   return (
     <section
       id="#home"
@@ -249,6 +255,46 @@ export default function Hero() {
               />
             </Link>
           </motion.div>
+          {/* Primary Button */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 0.7,
+              delay: 0.4,
+            }}>
+            <button
+              onClick={(e)=>{
+                e.stopPropagation();
+                setOpen(true);
+              }}
+              className="
+                flex
+                h-12
+                w-full
+                min-w-47.5
+                items-center
+                justify-center
+                border
+                border-[#D4AF37]
+                bg-[#2E7D32]
+                px-6
+                text-sm
+                font-medium
+                text-white
+                transition-all
+                duration-300
+                hover:bg-[#c9a52f]
+                hover:shadow-lg
+                hover:shadow-[#D4AF37]/20
+                sm:w-auto
+                cursor-pointer
+                mt-3
+              "
+            >
+              Payment
+            </button>
+            </motion.div>
         </div>
       </div>
 

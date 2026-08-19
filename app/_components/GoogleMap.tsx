@@ -108,7 +108,7 @@ export default function GoogleMap() {
               transition-shadow
               duration-300
               hover:shadow-lg
-              h-[500px]
+              h-125
             "
           >
             <div className="relative h-full">
@@ -128,9 +128,9 @@ export default function GoogleMap() {
               />
 
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11672.945750644447!2d-122.42107853750231!3d37.7730507907087!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858070cc2fbd55%3A0xa71491d736f62d5c!2sGolden%20Gate%20Bridge!5e0!3m2!1sen!2sus!4v1619524992238!5m2!1sen!2sus"
-                width="100%"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d972.2584058620856!2d77.55760486953643!3d12.905559506440932!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3fd90fbcab0d%3A0xafa7ce20d27fe76a!2sbus%20stop%2C%20524%2C%2050%20Feet%20Main%20Rd%2C%20near%2015f%2C%20near%20Sri%20Krishna%20aramane%2C%20Kumaraswamy%20Layout%202nd%20Stage%2C%20Kumaraswamy%20Layout%2C%20Bengaluru%2C%20Karnataka%20560111!5e0!3m2!1sen!2sin!4v1787150609336!5m2!1sen!2sin"
                 height="100%"
+                width="100%"
                 style={{
                   border: 0,
                 }}
@@ -145,7 +145,7 @@ export default function GoogleMap() {
       </div>
       <div className="flex items-center justify-center">
             <motion.a
-              href="https://www.google.com/maps"
+              href="https://maps.app.goo.gl/zhzqvBYhpgRXxLxK6"
               target="_blank"
               rel="noopener noreferrer"
               initial={{

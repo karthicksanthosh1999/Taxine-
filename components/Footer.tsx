@@ -6,24 +6,20 @@ import Image from "next/image";
 
 const services = [
   {
-    label: "Income Tax",
-    href: "/services/income-tax",
+    label: "Home",
+    href: "/",
   },
   {
-    label: "GST",
-    href: "/services/gst",
+    label: "Services",
+    href: "/services",
   },
   {
-    label: "Audit",
-    href: "/services/audit",
+    label: "About Us",
+    href: "/about",
   },
   {
-    label: "Compliance",
-    href: "/services/compliance",
-  },
-  {
-    label: "Privacy Policy",
-    href: "/privacy-policy",
+    label: "Contact Us",
+    href: "/contact",
   },
 ];
 
@@ -31,7 +27,6 @@ export default function Footer() {
   return (
     <footer className="w-full bg-[#192D41] text-white">
       <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-10">
-
         {/* Main Footer */}
         <motion.div
           initial={{
@@ -82,7 +77,7 @@ export default function Footer() {
                   sm:text-3xl
                 "
               >
-                   <Image src="/logo.webp" alt="" width={150} height={150} />
+                   <Image src="/dark-logo.png" alt="footer" width={150} height={150} />
               </h2>
             </Link>
 

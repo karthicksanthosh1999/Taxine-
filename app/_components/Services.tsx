@@ -14,6 +14,7 @@ import {
 import { motion, Variants } from "framer-motion";
 
 interface Service {
+  id?: string,
   category: string;
   title: string;
   description: string;
@@ -24,6 +25,7 @@ interface Service {
 const services: Service[] = [
   {
     category: "TAXATION",
+    id:"#incomeTaxServices",
     title: "Income Tax Services",
     description:
       "Complete income tax planning, preparation, and filing services for individuals, businesses, and corporates.",

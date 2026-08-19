@@ -10,14 +10,14 @@ interface ServiceSectionProps {
 }
 
 const defaultServices = [
-  "Business Registrations",
+  "Income Tax Services",
+  "GST Compliance",
+  "Audit & Assurance",
+  "Business Registration",
   "Accounting & Bookkeeping",
-  "GST & Tax Compliance",
-  "Statutory Audit",
-  "Tax Planning & Advisory",
-  "Corporate Compliance",
-  "Financial Consulting",
-  "Regulatory Certifications",
+  "Business & Legal Advisory",
+  "Business Licenses & Registrations",
+  "Management Consultancy Services",
 ];
 
 export default function MiniServices({
@@ -45,14 +45,15 @@ export default function MiniServices({
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
             className="
-              text-4xl
-              font-bold
-              tracking-tight
-              text-[#071D3A]
-              sm:text-5xl
+            font-serif
+            font-bold
+            tracking-tight
+            text-[#092b4c]
+            text-4xl
+            sm:text-5xl
             "
           >
-            {title}
+            Comprehensive Financial <span className="text-[#29752D]">Services</span>
           </motion.h2>
 
           <motion.p
@@ -92,7 +93,7 @@ export default function MiniServices({
 
           {/* BUTTON */}
           <motion.a
-            href="#services"
+            href="/services"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}

@@ -12,7 +12,7 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-gray-200 bg-[#F8F9FA]/95 backdrop-blur-md">
+    <header className="sticky inset-0 top-0 z-30 w-full border-b border-gray-200 bg-[#F8F9FA]/95 backdrop-blur-md">
       <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
 
         {/* ========================= */}
@@ -20,7 +20,6 @@ const Header = () => {
         {/* ========================= */}
 
         <div className="flex h-20 items-center justify-between">
-
           {/* Logo */}
           <Link
             href="/"
@@ -81,7 +80,7 @@ const Header = () => {
                   absolute
                   bottom-0
                   left-0
-                  h-[2px]
+                  h-0.5
                   w-full
                   bg-[#D4AF37]
                 "
@@ -124,7 +123,7 @@ const Header = () => {
             </a>
 
             <Link
-              href="#contact"
+              href="/contact"
               className="
                 inline-flex
                 items-center
@@ -140,7 +139,7 @@ const Header = () => {
                 hover:bg-[#D4AF37]
               "
             >
-              Free Consultation
+               Book Free Consultation
             </Link>
           </div>
 
@@ -248,7 +247,6 @@ const Header = () => {
                         w-full
                         items-center
                         justify-center
-                        bg-[#1A2B3C]
                         px-5
                         py-3
                         text-sm
@@ -256,8 +254,8 @@ const Header = () => {
                         text-white
                         transition-colors
                         duration-300
-                        hover:bg-[#D4AF37]
-                        hover:text-white
+                        bg-primary
+                        hover:bg-primaryGreen
                       "
                     >
                       Book Free Consultation
