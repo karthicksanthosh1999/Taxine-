@@ -23,7 +23,7 @@ export default function Home() {
           qrCodeUrl="/payment-1.jpeg"
           isOpen={isOpen} 
           onClose={()=>setIsOpen(false)} 
-          upiId="yokeshkr26@okaxis"  
+          upiId="7975904980@kotakbank"  
         />
       </AuthProvider>
     </>

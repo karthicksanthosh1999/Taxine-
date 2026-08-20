@@ -249,105 +249,112 @@ export default function ContactSection() {
             }}
             className="mt-8 flex items-center gap-3"
           >
-            {[
-              {
-                icon: FaFacebookF,
-                label: "Facebook",
-              },
-              {
-                icon: FaWhatsapp,
-                label: "WhatsApp",
-              },
-              {
-                icon: FaInstagram,
-                label: "Instagram",
-              },
-              {
-                icon: FaEnvelope,
-                label: "Email",
-              },
-            ].map((item, index) => {
-              const Icon = item.icon;
+        {[
+          {
+            icon: FaFacebookF,
+            label: "Facebook",
+            link: "https://www.facebook.com/taxinetaxconsultants",
+          },
+          {
+            icon: FaWhatsapp,
+            label: "WhatsApp",
+            link: "https://wa.me/917975904980",
+          },
+          {
+            icon: FaInstagram,
+            label: "Instagram",
+            link: "https://www.instagram.com/taxinetaxconsultants",
+          },
+          {
+            icon: FaEnvelope,
+            label: "Email",
+            link: "mailto:taxinetaxconsultants@gmail.com",
+          },
+        ].map((item, index) => {
+          const Icon = item.icon;
+          return (
+            <motion.a
+              key={item.label}
+              href={item.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={item.label}
+              initial={{
+                opacity: 0,
+                scale: 0.7,
+                y: 15,
+              }}
+              whileInView={{
+                opacity: 1,
+                scale: 1,
+                y: 0,
+              }}
+              viewport={{
+                once: true,
+              }}
+              transition={{
+                duration: 0.4,
+                delay: 0.8 + index * 0.1,
+                ease: "easeOut",
+              }}
+              whileHover={{
+                scale: 1.12,
+                y: -5,
+              }}
+              whileTap={{
+                scale: 0.92,
+              }}
+              className="
+                group
+                relative
+                flex
+                size-10
+                items-center
+                justify-center
+                overflow-hidden
+                border
+                border-white/10
+                bg-[#192D41]
+                text-white
+                transition-colors
+                duration-300
+                rounded-full
+              "
+            >
+              {/* Glow */}
+              <motion.span
+                className="
+                  absolute
+                  inset-0
+                  rounded-full
+                  bg-[#D4AF37]
+                  opacity-0
+                  blur-md
+                "
+                whileHover={{
+                  opacity: 0.25,
+                  scale: 1.4,
+                }}
+                transition={{
+                  duration: 0.3,
+                }}
+              />
 
-              return (
-                <motion.button
-                  key={item.label}
-                  initial={{
-                    opacity: 0,
-                    scale: 0.7,
-                    y: 15,
-                  }}
-                  whileInView={{
-                    opacity: 1,
-                    scale: 1,
-                    y: 0,
-                  }}
-                  viewport={{
-                    once: true,
-                  }}
-                  transition={{
-                    duration: 0.4,
-                    delay: 0.8 + index * 0.1,
-                    ease: "easeOut",
-                  }}
-                  whileHover={{
-                    scale: 1.12,
-                    y: -5,
-                  }}
-                  whileTap={{
-                    scale: 0.92,
-                  }}
-                  className="
-                    group
-                    relative
-                    flex
-                    size-10
-                    items-center
-                    justify-center
-                    overflow-hidden
-                    border
-                    border-white/10
-                    bg-[#192D41]
-                    text-white
-                    transition-colors
-                    duration-300
-                  "
-                  aria-label={item.label}
-                >
-                  {/* Glow */}
-                  <motion.span
-                    className="
-                      absolute
-                      inset-0
-                      rounded-full
-                      bg-[#D4AF37]
-                      opacity-0
-                      blur-md
-                    "
-                    whileHover={{
-                      opacity: 0.25,
-                      scale: 1.4,
-                    }}
-                    transition={{
-                      duration: 0.3,
-                    }}
-                  />
-
-                  {/* Icon */}
-                  <motion.span
-                    className="relative z-10 flex items-center justify-center cursor-pointer"
-                    whileHover={{
-                      rotate: [0, -10, 10, 0],
-                    }}
-                    transition={{
-                      duration: 0.4,
-                    }}
-                  >
-                    <Icon size={20} />
-                  </motion.span>
-                </motion.button>
-              );
-            })}
+              {/* Icon */}
+              <motion.span
+                className="relative z-10 flex cursor-pointer items-center justify-center"
+                whileHover={{
+                  rotate: [0, -10, 10, 0],
+                }}
+                transition={{
+                  duration: 0.4,
+                }}
+              >
+                <Icon size={20} />
+              </motion.span>
+            </motion.a>
+          );
+        })}
           </motion.div>
         </motion.div>
 
