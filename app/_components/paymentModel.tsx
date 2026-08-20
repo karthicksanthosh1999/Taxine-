@@ -25,6 +25,18 @@ const PaymentModal = ({
 }: PaymentModalProps) => {
   const [copied, setCopied] = useState(false);
 
+  useEffect(() => {
+  if (isOpen) {
+    document.body.style.overflow = "hidden";
+  } else {
+    document.body.style.overflow = "";
+  }
+
+  return () => {
+    document.body.style.overflow = "";
+  };
+}, [isOpen]);
+
   const handleCopy = async () => {
     try {
       await navigator.clipboard.writeText(upiId);
@@ -46,18 +58,17 @@ const PaymentModal = ({
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="
-            absolute
-            inset-0
-            top-0
-            z-50
-            flex
-            items-center
-            justify-center
-            bg-black/60
-            px-4
-            backdrop-blur-sm
-          "
+className="
+  fixed
+  inset-0
+  z-50
+  flex
+  items-center
+  justify-center
+  bg-black/60
+  px-4
+  backdrop-blur-sm
+"
           onClick={onClose}
         >
           <motion.div
